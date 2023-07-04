@@ -1,11 +1,28 @@
 {
   "name": "chatproject",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A web chat application",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon backend/server.js",
+    "server": "nodemon backend/server.js"
   },
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "mern",
+    "chat-app"
+  ],
+  "author": "Pallavi Singh - Mern Stack developer",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.9",
+    "nodemon": "^2.0.22",
+    "socket.io": "^4.1.2"
+  }
 }
