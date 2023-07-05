@@ -12,7 +12,7 @@ root.render(
    
   <BrowserRouter> 
   <ChakraProvider>
-    <Button colorScheme='blue'>Button</Button><ChakraProvider></ChakraProvider>
+    {/* <Button colorScheme='blue'>Button</Button><ChakraProvider></ChakraProvider> */}
     <App />
     </ChakraProvider> 
     </BrowserRouter>
