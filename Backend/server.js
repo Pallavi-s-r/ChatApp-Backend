@@ -2,8 +2,12 @@ const express = require("express");
 const dotenv = require("dotenv");
 var cors = require('cors')
 const app = express();
+const connectDB= require('./config/db')
 const {chats} = require("./data/data")
 dotenv.config();
+const colors = require('colors');
+connectDB();
+
 
 app.get('/', (req,res)=>{
     res.send("Hii this server");
