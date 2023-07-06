@@ -3,8 +3,9 @@
 .App {
     min-height: 100vh;
     display: flex;
-    background-image: url("../assests/bg.jpg");
+    /* background-image: url("../assests/bg.jpg"); */
     background-position: center;
     background-size: cover;
+    background-color: #a6c8ff;
     color: black;
 }
