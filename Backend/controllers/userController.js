@@ -61,6 +61,22 @@ const authUser = asyncHandler(async (req, res) => {
   }
 });
 
-module.exports = {registerUser, authUser}
+
+const allUsers = asyncHandler(async(req,res)=>{
+  const keyword = req.query.searc?{
+    $or:[
+      {name:{$regex:req.query.search, $options:"i"}},
+      {email:{$regex:req.query.search, $options:"i"}},
+  ]
+  }:{} //else we don't do any thing
+  // console.log(keyword)
+
+  const users = await User.find(keyword).find({_id:{$ne:req.user._id}});
+
+  // find({_id:{$ne:req.user._id}}); -- this is to get users ignoring the logined user
+
+  res.send(users);
+})
+module.exports = {registerUser, authUser, allUsers}
 
 

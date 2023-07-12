@@ -15,7 +15,8 @@ app.use(express.json());
 app.get('/', (req,res)=>{
     res.send("Hii this server");
 })
-app.use('/api/user',route);
+app.use('/api',route);
+
 
 app.use(notFound)
  app.use(errorHandler)

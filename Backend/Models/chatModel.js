@@ -3,7 +3,7 @@
 
 const mongoose = require('mongoose');
 
-const chatModel = mongoose.Schema.get({
+const chatModel = new mongoose.Schema({
     chatName : {type:String , trim:true},
     isGroupChat : {type:Boolean , default:false},
     users:[{
